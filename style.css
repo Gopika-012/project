@@ -1,25 +1,134 @@
 body {
-    font-family: 'Verdana', sans-serif;  /* changed font style */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: #020617;
+}
+
+nav a {
+    color: #cbd5f5;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+}
+
+.hero-text span {
+    color: #38bdf8;
+}
+
+/* Profile */
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 3px solid #38bdf8;
+    object-fit: cover;
+}
+
+/* Welcome */
+.welcome {
+    background: #020617;
+    margin: 30px 60px;
+    padding: 30px;
+    border-radius: 12px;
     text-align: center;
-    background-color: #f4f4f4;
-    color: #222;  /* default text color */
 }
 
-h1 {
-    color: #4CAF50;   /* green heading */
-    font-family: 'Georgia', serif; /* stylish font */
+/* Cards */
+.card {
+    background: #020617;
+    margin: 30px 60px;
+    padding: 30px;
+    border-radius: 12px;
 }
 
-form {
-    margin-top: 20px;
+/* Headings */
+h2 {
+    color: #38bdf8;
 }
 
-input, textarea {
-    padding: 10px;
-    margin: 5px;
-    width: 250px;
-    color: #333;   /* text inside input */
-    font-family: 'Courier New', monospace; /* different font */
-    border: 2px solid #4CAF50;
-    border-radius: 5px;
+/* Skills & Interests */
+.skills span,
+.interests span {
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 10px 15px;
+    margin: 6px;
+    display: inline-block;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.skills span:hover,
+.interests span:hover {
+    background: #38bdf8;
+    color: black;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    background: #1e293b;
+    color: #e2e8f0;
+}
+
+.contact-form textarea {
+    height: 100px;
+}
+
+.contact-form button {
+    background: #38bdf8;
+    color: black;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #0ea5e9;
+}
+
+/* Success message */
+#successMsg {
+    text-align: center;
+    margin-top: 10px;
+    color: #38bdf8;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #94a3b8;
 }
