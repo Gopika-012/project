@@ -1,5 +1,5 @@
 const form = document.getElementById("contactForm");
-const successMsg = document.getElementById("successMsg");
+const popup = document.getElementById("popup");
 
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -22,14 +22,21 @@ form.addEventListener("submit", async (e) => {
         const result = await res.text();
 
         if (result.includes("success")) {
-            successMsg.style.display = "block";  // show message
-            form.reset(); // clear form
+            form.reset();
+
+            // ✅ Show popup
+            popup.classList.add("show");
+
+            // Hide after 3 seconds
+            setTimeout(() => {
+                popup.classList.remove("show");
+            }, 3000);
+
         } else {
             alert("Error sending message");
         }
 
-    } catch (error) {
-        console.log(error);
+    } catch {
         alert("Server error");
     }
 });
